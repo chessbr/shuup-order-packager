@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+install:
+  - pip install -U pip
+  - pip install coveralls
+  - pip install -e git+https://github.com/rockho-team/shuup.git@stable#egg=shuup[everything]
+  - pip install -e .
+script:
+  - py.test -ra -vvv --cov-config .coveragerc --cov shuup_order_packager shuup_order_packager_tests
+after_success: coveralls
