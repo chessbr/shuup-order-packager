@@ -74,8 +74,8 @@ class SimplePackageDimensionConstraint(AbstractPackageConstraint):
 
         # soma das arestas da caixa contendo o produto não pode ultrapassar a constraint
         elif self.max_edges_sum:
-            package_edges_sum = (max(package.width, width) + \
-                                 max(package.length, length) + \
+            package_edges_sum = (max(package.width, width) +
+                                 max(package.length, length) +
                                  (package.height + height))
 
             if package_edges_sum > self.max_edges_sum:

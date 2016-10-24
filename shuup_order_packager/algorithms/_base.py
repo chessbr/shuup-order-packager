@@ -55,4 +55,3 @@ class AbstractPackager(object):
         :rtype: Iterable[Package]
         """
         raise NotImplementedError("Implement this method")
-

@@ -47,7 +47,7 @@ class SimplePackager(AbstractPackager):
 
         # valida se o produto está bem configurado
         if not product.width or not product.depth or not product.height or not product.gross_weight:
-            logger.warn("SimplePackage: Produto {0} (id={1}) mal configurado. "\
+            logger.warn("SimplePackage: Produto {0} (id={1}) mal configurado. "
                         "Configure corretamente as dimensoes e peso do produto.".format(product, product.id))
             return False
         return True
